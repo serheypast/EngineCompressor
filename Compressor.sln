@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibTiff", "LibTiff\LibTiff.vcxproj", "{D6AC28BC-D725-43ED-8E24-66A59ECFEA74}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Compressor", "Compressor\Compressor.vcxproj", "{E3A5C368-0072-480D-9778-B930DD9AFC11}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D6AC28BC-D725-43ED-8E24-66A59ECFEA74} = {D6AC28BC-D725-43ED-8E24-66A59ECFEA74}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6AC28BC-D725-43ED-8E24-66A59ECFEA74}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D6AC28BC-D725-43ED-8E24-66A59ECFEA74}.Debug|Win32.Build.0 = Debug|Win32
+		{D6AC28BC-D725-43ED-8E24-66A59ECFEA74}.Release|Win32.ActiveCfg = Release|Win32
+		{D6AC28BC-D725-43ED-8E24-66A59ECFEA74}.Release|Win32.Build.0 = Release|Win32
+		{E3A5C368-0072-480D-9778-B930DD9AFC11}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E3A5C368-0072-480D-9778-B930DD9AFC11}.Debug|Win32.Build.0 = Debug|Win32
+		{E3A5C368-0072-480D-9778-B930DD9AFC11}.Release|Win32.ActiveCfg = Release|Win32
+		{E3A5C368-0072-480D-9778-B930DD9AFC11}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

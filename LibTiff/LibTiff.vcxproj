@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D6AC28BC-D725-43ED-8E24-66A59ECFEA74}</ProjectGuid>
+    <RootNamespace>LibTiff</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>libtiff.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="t4.h" />
+    <ClInclude Include="tiff.h" />
+    <ClInclude Include="tiffconf.h" />
+    <ClInclude Include="tiffio.h" />
+    <ClInclude Include="tiffiop.h" />
+    <ClInclude Include="tiffvers.h" />
+    <ClInclude Include="tif_dir.h" />
+    <ClInclude Include="tif_fax3.h" />
+    <ClInclude Include="tif_predict.h" />
+    <ClInclude Include="uvcode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tif_aux.c" />
+    <ClCompile Include="tif_close.c" />
+    <ClCompile Include="tif_codec.c" />
+    <ClCompile Include="tif_color.c" />
+    <ClCompile Include="tif_compress.c" />
+    <ClCompile Include="tif_dir.c" />
+    <ClCompile Include="tif_dirinfo.c" />
+    <ClCompile Include="tif_dirread.c" />
+    <ClCompile Include="tif_dirwrite.c" />
+    <ClCompile Include="tif_dumpmode.c" />
+    <ClCompile Include="tif_error.c" />
+    <ClCompile Include="tif_extension.c" />
+    <ClCompile Include="tif_fax3.c" />
+    <ClCompile Include="tif_fax3sm.c" />
+    <ClCompile Include="tif_flush.c" />
+    <ClCompile Include="tif_getimage.c" />
+    <ClCompile Include="tif_luv.c" />
+    <ClCompile Include="tif_lzw.c" />
+    <ClCompile Include="tif_next.c" />
+    <ClCompile Include="tif_ojpeg.c" />
+    <ClCompile Include="tif_open.c" />
+    <ClCompile Include="tif_packbits.c" />
+    <ClCompile Include="tif_pixarlog.c" />
+    <ClCompile Include="tif_predict.c" />
+    <ClCompile Include="tif_print.c" />
+    <ClCompile Include="tif_read.c" />
+    <ClCompile Include="tif_strip.c" />
+    <ClCompile Include="tif_swab.c" />
+    <ClCompile Include="tif_thunder.c" />
+    <ClCompile Include="tif_tile.c" />
+    <ClCompile Include="tif_unix.c" />
+    <ClCompile Include="tif_version.c" />
+    <ClCompile Include="tif_warning.c" />
+    <ClCompile Include="tif_write.c" />
+    <ClCompile Include="tif_zip.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tif_config.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
